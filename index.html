@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<title>Totally Teen</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="totallyteen.css">
+<script src="totallyteen.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("https://www.parentmap.com/sites/default/files/styles/1180x660_scaled_cropped/public/2017-07/teens_istock_7_2017.png?itok=uk6CWzxx");
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-3 {
+  background-image: url("https://be35832fa5168a30acd6-5c7e0f2623ae37b4a933167fe83d71b5.ssl.cf3.rackcdn.com/2758/teenagers-jumping-in-the-air__hero.jpg?1469460538");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-2 {
+  background-image: url("https://www.greatschools.org/gk/wp-content/uploads/2014/05/Go-global-summer-international-programs-for-teens.jpg");
+  min-height: 400px;
+}
+
+.wide {letter-spacing: 10px;}
+.hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="top">
+  <div class="bar" id="myNavbar">
+    <a class="bar-item button hover-black hide-medium hide-large right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="bar-item button">HOME</a>
+    <a href="#about" class="bar-item button hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="bar-item button hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="#contact" class="bar-item button hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="bar-item button hide-small right hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="bar-block white hide hide-large hide-medium">
+    <a href="#about" class="bar-item button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="bar-item button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="bar-item button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="bar-item button">SEARCH</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 display-container opacity-min" id="home">
+  <div class="display-middle" style="white-space:nowrap;">
+    <span class="center padding-large black xlarge wide animate-opacity"> <span class="hide-small">TOTALLY</span> TEEN</span>
+  </div>
+</div>
+
+  <div><center>
+    <a href="./new york/new-york.html"><button class="state-button"><span>New York  </span></button></a>
+    <a href="./new jersey/new-jersey.html"><button class="state-button"><span>New Jersey  </span></button></a>
+    <a href="./illinois/chicago.html"><button class="state-button"><span>Chicago, Illinois  </span></button></a>
+    <a href="./massachusetts/boston.html"><button class="state-button"><span>Boston, Massachusetts  </span></button></a>
+    <a href="./maryland/baltimore.html"><button class="state-button"><span>Baltimore, Maryland  </span></button></a>
+    <a href="./pennsylvania/philly.html"><button class="state-button"><span>Philadelphia, Pennsylvania  </span></button></a>
+    <a href="./los-angeles/los-angeles.html"><button class="state-button"><span>Los Angeles, California </span></button></a>
+    <a href="./san-francisco/san-fran.html"><button class="state-button"><span>San Francisco, California  </span></button></a>
+  </div></center>
+
+
+<!-- Container (About Section) -->
+<div class="content container padding-64" id="about">
+  <h3 class="center">ABOUT US</h3>
+  <!-- Grid -->
+<div class="row-padding" id="about">
+  <div class="center padding-64">
+    <span class="xlarge bottombar border-dark-grey padding-16">Who Are We</span>
+  </div>
+
+  <div class="quarter margin-bottom">
+    <div class="card-4">
+      <img src="lori1.jpg" style="width:100%; height:200px">
+      <div class="container">
+        <h3>Lori Purswani</h3>
+        <p class="opacity">Freehold High School</p>
+        <p>Lori is a rising Senior at Freehold High School. Her favorite subject in school is History, and her favorite sport to play is Volleyball! Her favorite activities include hanging out with friends and snowboarding. She joined Girls Who Code to get a better understanding of coding, and is planning to pursue her journey through college!</p>
+        <a href = "https://www.instagram.com/lori_purswani/?hl=en"><p><button class="button light-grey block">Contact</button></p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="quarter margin-bottom">
+    <div class="card-4">
+      <img src="giulianna2.jpg" style="width:100%; height:200px">
+      <div class="container">
+        <h3>Giulianna Farina</h3>
+        <p class="opacity">Mater Dei Prep</p>
+        <p>Giulianna is a rising Senior at Mater Dei Prep. Her favorite subject in school is Math, and her favorite sports are Tennis and Skiing. She enjoys photography and spending time with friends and family. She joined Girls Who Code as a way to begin her Computer Science journey. She now plans to pursue it in college and future education opportunities!</p>
+        <a href = "https://www.instagram.com/giuliannafarina/?hl=en"><p><button class="button light-grey block">Contact</button></p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="quarter margin-bottom">
+    <div class="card-4">
+      <img src="brittany2.jpg" style="width:100%; height:200px">
+      <div class="container">
+        <h3>Brittany Cantu</h3>
+        <p class="opacity">Academy of Finance & Enterprise</p>
+        <p>Brittany is a rising senior at The Academy of Finance and Enterprise. Her favorite subject in school is Chemistry, she enjoys playing volleyball and badminton and hanging out with friends in the city during her free time. She joined Girls Who Code to learn something new and do something fun during this summer! </p>
+
+        <a href = "https://www.instagram.com/brittany_camps/?hl=en"><p><button class="button light-grey block">Contact</button></p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="quarter margin-bottom">
+    <div class="card-4">
+      <img src="shaun3.jpg" style="width:100%;height:200px;">
+      <div class="container">
+        <h3>Shaun Shirley</h3>
+        <p class="opacity">Brooklyn Laboratory Charter School</p>
+        <p>Shauntavia is a rising Junior at Brooklyn Laboratory Charter School. Her favorite subject in school is Biology and English. She enjoys shopping and binge watching movies and tv shows. Her favorite sports are volleyball, netball, and track field. She joined Girls Who Code to learn about the world of Coding and explore technology world!</p>
+
+        <a href = "https://www.instagram.com/india_rose7/?hl=en"><p><button class="button light-grey block">Contact</button></p></a>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+  <p class="center"><em>How we got inspired:</em></p>
+  <p>We have created a website that was made for teens by teens. The biggest question we ask when hanging out with our friends is where are we going and what are we doing? Then comes the issue of pricing and distance from home.
+    Our group recently became friends from a summer program we did together but we all come from different areas of New York and New Jersey. This site lets us find fun places near all of us that can accomodate for all of us. </p>
+
+</div>
+
+<!-- Partners -->
+<div class="row center dark-grey padding-16">
+  <div class="quarter section">
+    <span class="xlarge">14+</span><br>
+    Partners
+  </div>
+  <div class="quarter section">
+    <span class="xlarge">55+</span><br>
+    Sponsors
+  </div>
+  <div class="quarter section">
+    <span class="xlarge">1000+</span><br>
+    Happy Teens
+  </div>
+  <div class="quarter section">
+    <span class="xlarge">150+</span><br>
+    Activities
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 display-container opacity-min">
+  <div class="display-middle">
+    <span class="xxlarge text-white wide"></span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+
+
+  <h3 class="center">Feautured Events</h3>
+  <p class="center"><em>Here are some of our latest events.<br> Click on the images to learn more about them.</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="row-padding center">
+    <div class="col m3">
+      <img src="https://www.linkedin.com/media-proxy/ext?w=1920&h=1280&hash=7VpO1mJHBDW8p8OH0Av4r7JHSn8%3D&ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0VmvnwtUxwok7rqJuE3-6kJTCorfTWHjH3z5poDvMTOtKJSHJOf_4B4JeyoBkAAwd-ysSTHlDeH5edizKLMTzsn7ftCz" style="width:100%;height:150px;" onclick="onClick(this)" class="hover-opacity" alt="Foam Run">
+    </div>
+
+    <div class="col m3">
+      <img src="https://washington-org.s3.amazonaws.com/s3fs-public/wwwchris_concert-at-the-anthem-on-the-wharf-with-confetti_yesmydccool.jpg" style="width:100%;height:150px;" onclick="onClick(this)" class="hover-opacity" alt="Rave">
+    </div>
+
+    <div class="col m3">
+      <img src="https://i.ytimg.com/vi/P0JltC80ahM/maxresdefault.jpg" style="width:100%;height:150px;" onclick="onClick(this)" class="hover-opacity" alt="Tubing">
+    </div>
+
+    <div class="col m3">
+      <img src="https://daily.jstor.org/wp-content/uploads/2017/03/drive_in_theater_1050x700.jpg" style="width:100%;height:150px;" onclick="onClick(this)" class="hover-opacity" alt="Drive-in Theater">
+    </div>
+  </div>
+
+  <div class="row-padding center section">
+    <div class="col m3">
+      <img src="https://townsquare.media/site/385/files/2018/06/The-Stone-Pony-Pielka-benefit.jpg?w=630&h=420&q=75" style="width:100%;height:150px;" onclick="onClick(this)" class="hover-opacity" alt="Stone Pony">
+    </div>
+
+    <div class="col m3">
+      <img src="https://cdn.newsday.com/polopoly_fs/1.26708911.1549028529!/httpImage/image.jpg_gen/derivatives/landscape_768/image.jpg" style="width:100%;height:150px;" onclick="onClick(this)" class="hover-opacity" alt="Bryant Park">
+    </div>
+
+    <div class="col m3">
+      <img src="https://media-cdn.tripadvisor.com/media/photo-s/06/0d/00/af/diggerland.jpg" style="width:100%;height:150px;" onclick="onClick(this)" class="hover-opacity" alt="Digger Land">
+    </div>
+
+    <div class="col m3">
+      <img src="https://amp.businessinsider.com/images/5baa825d0119b2128e44a62d-750-563.jpg" style="width:100%;height:150px;" onclick="onClick(this)" class="hover-opacity" alt="Six Flags Great Adventure">
+  </div>
+</div>
+
+<br>
+<br>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="modal black" onclick="this.style.display='none'">
+  <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="modal-content animate-zoom center transparent padding-64">
+    <img id="img01" class="image">
+    <p id="caption" class="opacity large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 display-container opacity-min">
+  <div class="display-middle">
+     <span class="xxlarge text-white wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="content container padding-64" id="contact">
+  <h3 class="center">WHERE WE WORK</h3>
+  <p class="center"><em>We'd love your feedback and suggestions!</em></p>
+
+  <div class="row padding-32 section">
+    <div class="col m4 container">
+      <img src="http://www.districtdispatch.org/wp-content/uploads/2017/08/GWC-logo.png" class="image round" style="width:100%">
+    </div>
+    <div class="col m8 panel">
+      <div class="large margin-bottom">
+        <i class="fa fa-map-marker fa-fw hover-text-black xlarge margin-right"></i> New York & New Jersey, USA<br>
+        <i class="fa fa-phone fa-fw hover-text-black xlarge margin-right"></i> Phone: +00 782 569 3425<br>
+        <i class="fa fa-envelope fa-fw hover-text-black xlarge margin-right"></i> Email: totallyteen@gmail.com<br>
+      </div>
+      <p>Let us know what you think:</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="row-padding" style="margin:0 -16px 8px -16px">
+          <div class="half">
+            <input class="input border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="half">
+            <input class="input border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="input border" type="text" placeholder="Message" required name="Message">
+        <button class="button black right section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="center black padding-64 opacity hover-opacity-off">
+  <a href="#home" class="button light-grey"><i class="fa fa-arrow-up margin-right"></i>To the top</a>
+  <div class="xlarge section">
+    <a href="https://www.facebook.com/TotallyTeen4/"><i class="fa fa-facebook-official hover-opacity"></i></a>
+    <a href="https://www.instagram.com/totallyteen4/?hl=en"><i class="fa fa-instagram hover-opacity"></i></a>
+    <a href="https://pin.it/4yshwqwmbcg7v7"><i class="fa fa-pinterest-p hover-opacity"></i></a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<title>Somi Somi - Los Angeles, California </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../totallyteen.css">
+<script src="../totallyteen.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="sidebar bar-block white collapse top" style="z-index:3;width:200px" id="mySidebar">
+  <div class="container display-container padding-16">
+    <i onclick="w3_close()" class="fa fa-remove hide-large button display-topright"></i>
+    <h3 class="wide"><b><a href="../index.html"><img src="../Totally Teen.png" style="width:150px;height:150px;"></a></b></h3>
+  </div>
+  <div class="padding-32 large text-grey" style="font-weight:bold">
+    <a href="#" class="bar-item button">All</a>
+    <a href="#" class="bar-item button">Restaurants</a>
+    <a href="#" class="bar-item button">Activities</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="button block white left-align" id="myBtn">
+      Prices <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="bar-block hide padding-large medium">
+      <a href="#" class="bar-item button light-grey">Free</a>
+      <a href="#" class="bar-item button">$</a>
+      <a href="#" class="bar-item button">$$</a>
+      <a href="#" class="bar-item button">$$$</a>
+    </div>
+  </div>
+  <a href="#footer" class="bar-item button padding">Contact</a>
+  <a href="javascript:void(0)" class="bar-item button padding" onclick="document.getElementById('Follow').style.display='block'">Follow</a>
+  <a href="#footer"  class="bar-item button padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bar top hide-large black xlarge">
+  <div class="bar-item padding-24 wide">Somi Somi</div>
+  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="container xlarge">
+    <p class="left">California </p>
+    <p class="right">
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="display-container container">
+    <img src="https://kirbiecravings.com/wp-content/uploads/2017/11/somi-somi-7a-700x570.jpg" alt="Somi Somi" style="width:100%">
+    <div class="display-topleft text-white" style="padding:24px 48px">
+      <h1 class="jumbo hide-small">Somi Somi</h1>
+      <h1 class="hide-large hide-medium">Somi Somi</h1>
+    </div>
+  </div>
+
+  <div id="modal01" class="modal black" onclick="this.style.display='none'">
+    <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="modal-content animate-zoom center transparent padding-64">
+      <img id="img01" class="image">
+      <p id="caption" class="opacity large"></p>
+    </div>
+  </div>
+
+  <div class="padding-64">
+    <div class="row-padding">
+      <div>
+        <h2>What is it?</h2>
+        <p>Somi Somi is a icecream shop that serves goldfish waffle cone icecream. It gives you an experience you've never experienced before. </p>
+      <p>
+      </div>
+      <hr >
+      <div>
+        <h2>How much is it?</h2>
+        <p>Pricing - <em>$$</em>  <a href="https://www.somisomi.com/"> Learn More Here</a></p>
+      </div>
+      <hr >
+      <div>
+        <h2>Where is it?</h2>
+        <p><a href="https://goo.gl/maps/TjUsZeQP5aRyTBjk8">621 S Western Ave #208-A, Los Angeles, CA 90005</a></p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423073.6403014301!2d-118.5896812671875!3d34.06277649999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b89abe8d591f%3A0x6a1cf72c8d4a0c26!2sSomi+Somi!5e0!3m2!1sen!2sus!4v1565633847708!5m2!1sen!2sus" width="500" height="350" frameborder="0" style="border:1" allowfullscreen></iframe>
+      </div>
+      <hr >
+    </div>
+  </div>
+
+  <!-- Footer -->
+   <footer class="padding-32 light-grey small center" id="footer">
+    <div class="row-padding">
+        <center><h4>Contact</h4>
+        <p>Questions? Go ahead.</p></center>
+      <form action="/action_page.php" target="_blank">
+        <div class="row-padding" style="margin:0 -16px 8px -16px">
+          <div class="half">
+            <input class="input border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="half">
+            <input class="input border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="input border" type="text" placeholder="Message" required name="Message">
+        <button class="button black right section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center><div class="col">
+        <a href="https://www.facebook.com/TotallyTeen4/"><i class="fa fa-facebook-official hover-opacity"></i></a>
+        <a href="https://www.instagram.com/totallyteen4/?hl=en"><i class="fa fa-instagram hover-opacity"></i></a>
+        <a href="https://pin.it/4yshwqwmbcg7v7"><i class="fa fa-pinterest-p hover-opacity"></i></a>
+      </div>
+    </center>
+    </div>
+  </footer>
+
+</body>
+</html>

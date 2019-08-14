@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<title>Chicago, Illinois</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../totallyteen.css">
+<script src="../totallyteen.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="sidebar bar-block white collapse top" style="z-index:3;width:200px" id="mySidebar">
+  <div class="container display-container padding-16">
+    <i onclick="w3_close()" class="fa fa-remove hide-large button display-topright"></i>
+    <h3 class="wide"><b><a href="../index.html"><img src="../Totally Teen.png" style="width:150px;height:150px;"></a></b></h3>
+  </div>
+  <div class="padding-32 large text-grey" style="font-weight:bold">
+    <a id="allbutton" class="bar-item button" onclick= "allSelected()" >All</a>
+    <a id="restaurantbutton" class="bar-item button" onclick= "restaurantsSelected()" >Restaurants</a>
+    <a id = "activitybutton" class="bar-item button" onclick= "activitiesSelected()" >Activities</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="button block white left-align" id="myBtn">
+      Prices <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="bar-block hide padding-large medium">
+
+      <p id="freebutton" onclick= "tier0selected()" class="bar-item button">Free</a>
+      <p id="onedollarbutton" onclick ="tier1selected()" class="bar-item button">$</a>
+      <p id="twodollarbutton" onclick="tier2selected()" class="bar-item button">$$</a>
+      <p id="threedollarbutton" onclick="tier3selected()" class="bar-item button">$$$</a>
+    </div>
+  </div>
+  <a href="#footer" class="bar-item button padding">Contact</a>
+  <a href="javascript:void(0)" class="bar-item button padding" onclick="document.getElementById('Follow').style.display='block'">Follow</a>
+  <a href="#footer"  class="bar-item button padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bar top hide-large black xlarge">
+  <div class="bar-item padding-24 wide">Chicago</div>
+  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="container xlarge">
+    <p class="left">Chicago</p>
+    <p class="right">
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="display-container container">
+    <img src="https://www.enjoyillinois.com/assets/Uploads/CHICAGO-RIVER-FACEBOOK.jpg" alt="Chicago Area" style="width:100%">
+    <div class="display-topleft text-white" style="padding:24px 48px">
+      <h1 class="jumbo hide-small">Chicago</h1>
+      <h1 class="hide-large hide-medium">Illinois</h1>
+      <p><a href="#jeans" class="button black padding-large large">Explore Now</a></p>
+    </div>
+  </div>
+
+  <div class="container text-grey" id="jeans">
+    <p>18 items</p>
+  </div>
+
+  <div id="modal01" class="modal black" onclick="this.style.display='none'">
+    <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="modal-content animate-zoom center transparent padding-64">
+      <img id="img01" class="image">
+      <p id="caption" class="opacity large"></p>
+    </div>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div class="content container padding-64" id="portfolio">
+
+<!--ROW 1-->
+    <div class="row-padding center">
+      <div class="col m4" tier=0 category=activity>
+        <a href="bean.html"><img src="https://urbanmatter.com/chicago/wp-content/uploads/2016/03/the-bean.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="The Bean"></a>
+        <p>The Bean<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=activity>
+        <a href="wrigley.html"><img src="https://static.parade.com/wp-content/uploads/2018/07/wrigley-field-chicago-cubs-ftr.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Wirgley Field"></a>
+        <p>Wrigley Field<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+        <a href="congress-plaza.html"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Congress_Plaza_Hotel_-_Chicago_-_October_2012.JPG" style="width:300px;height:200px;"class="hover-opacity" alt="The Haunted Congress Plaza Hotel"></a>
+        <p>Congress Plaza Hotel<br><b>$$</b></p>
+      </div>
+    </div>
+
+<!--ROW 2-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=activity>
+        <a href="iFly.html"><img src="https://www.sporttechie.com/wp-content/uploads/2018/07/GettyImages-494536035-e1532459820457-1200x675.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="iFly Indoor Skydiving"></a>
+        <p>iFly Lincoln Park<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+      <a href="skydeck.html"><img src="https://cache.undercovertourist.com/tickets/chicago-skydeck-chicago-4706-16286cfcc66.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Sky Tower"></a>
+      <p>Skydeck Chicago<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+        <a href="wndr.html"><img src="https://news.artnet.com/app/news-upload/2018/10/16-1024x683.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="wndr museum"></a>
+        <p>wndr museum<br><b>$$</b></p>
+      </div>
+    </div>
+
+<!--ROW 3-->
+    <div class="row-padding center">
+      <div class="col m4" tier=3 category=activity>
+        <a href="helicopter-city.html"><img src="https://sfo2.digitaloceanspaces.com/cdn-cie/images/product/21697-1.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Helicopter City Tour"></a>
+        <p>Helicopter City Tour<br><b>$$$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=restaurant>
+      <a href="collectivo.html"><img src="https://dailycoffeenews.com/wp-content/uploads/2017/12/LoganSquare_2017_11_2.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Collectivo Coffee"></a>
+        <p>Collectivo Coffee<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=0 category=activity>
+        <a href="depaul.html"><img src="https://www.depaul.edu/student-life/PublishingImages/art-museum-main.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="DePaul Art Museum"></a>
+      <p>DePaul Art Museum<br><b>Free</b></p>
+    </div>
+  </div>
+
+<!--ROW 4-->
+    <div class="row-padding center">
+      <div class="col m4" tier=1 category=activity>
+        <a href="lincoln-park.html"><img src="https://www.greencitymarket.org/cmsimages/y6_aisle.jpg/image-full;size$350,233.ImageHandler" style="width:300px;height:200px;"class="hover-opacity" alt="Lincoln Park Farmers Market"></a>
+        <p>Lincoln Park Farmers Market<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=restaurant>
+        <a href="bombobar.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9XPN3_iCn2y-pY7c7As6okQckQNKttaWOBpXGUAzSRllv7K_y" style="width:300px;height:200px;"class="hover-opacity" alt="BomboBar"></a>
+      <p>BomboBar<br><b>$</b></p>
+    </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="etta.html"><img src="https://media.timeout.com/images/105295053/630/472/image.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Etta"></a>
+      <p>Etta<br><b>$$</b></p>
+      </div>
+    </div>
+
+<!--ROW 5-->
+      <div class="row-padding center">
+        <div class="col m4" tier=2 category=activity>
+            <a href="whirlyball.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Gnm0Q1gwT-ckch5mUsHVuaxcTcvWvxTaJ2Fcn75StnkeXnp2" style="width:300px;height:200px;"class="hover-opacity" alt="Whirlyball"></a>
+            <p>Whirlyball<br><b>$$</b></p>
+          </div>
+
+          <div class="col m4" tier=2 category=restaurant>
+            <a href="jojos.html"><img src="https://media.timeout.com/images/105395047/630/472/image.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="JoJo’s Milk Bar"></a>
+          <p>JoJo’s Milk Bar<br><b>$$</b></p>
+        </div>
+
+          <div class="col m4" tier=2 category=restaurant>
+            <a href="safehouse.html"><img src="https://www.chicagomag.com/images/cache/cache_f/cache_4/cache_c/63526-SAFEHOUSE-3-30c26c4f.jpeg?ver=1490646478&aspectratio=1.4975" style="width:300px;height:200px;"class="hover-opacity" alt="Safehouse Chicago"></a>
+          <p>Safehouse Chicago<br><b>$$</b></p>
+          </div>
+        </div>
+
+<!--Restaurants (2 are in row 4 but the rest fall under row 5 and below) (alternate Restaurants and Activities for ALL tab but then seperate in designated tabs)-->
+<!--ROW 6-->
+    <div class="row-padding center">
+      <div class="col m4" tier=1 category=restaurant>
+        <a href="portillos.html"><img src="https://www.portillos.com/assets/1/20/Maple_Grove_Interior.jpeg?1651" style="width:300px;height:200px;"class="hover-opacity" alt="Portillo’s"></a>
+        <p>Portillo’s<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+      <a href="ignite.html"><img src="https://walkthru360.com/wp-content/uploads/2017/11/Ignite-gaming-lounge-chicago-virtual-tour-360_IMG_5940_1_2.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Ignite Gaming Restaurant"></a>
+        <p>Ignite Gaming Restaurant<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=restaurant>
+        <a href="emporium-wicker-park.html"><img src="https://emporiumchicago.com/wp-content/uploads/2015/03/wickerpark-gallery-12.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Emporium Wicker Park"></a>
+      <p>Emporium Wicker Park<br><b>$</b></p>
+      </div>
+    </div>
+</div>
+<br>
+<br>
+
+  <!-- Footer -->
+   <footer class="padding-32 light-grey small center" id="footer">
+    <div class="row-padding">
+        <center><h4>Contact</h4>
+        <p>Questions? Go ahead.</p></center>
+      <form action="/action_page.php" target="_blank">
+        <div class="row-padding" style="margin:0 -16px 8px -16px">
+          <div class="half">
+            <input class="input border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="half">
+            <input class="input border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="input border" type="text" placeholder="Message" required name="Message">
+        <button class="button black right section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center><div class="col">
+        <a href="https://www.facebook.com/TotallyTeen4/"><i class="fa fa-facebook-official hover-opacity"></i></a>
+        <a href="https://www.instagram.com/totallyteen4/?hl=en"><i class="fa fa-instagram hover-opacity"></i></a>
+        <a href="https://pin.it/4yshwqwmbcg7v7"><i class="fa fa-pinterest-p hover-opacity"></i></a>
+      </div>
+    </center>
+    </div>
+  </footer>
+
+</body>
+</html>

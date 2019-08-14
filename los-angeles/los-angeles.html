@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<title>Los Angeles, California</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../totallyteen.css">
+<script src="../totallyteen.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="sidebar bar-block white collapse top" style="z-index:3;width:200px" id="mySidebar">
+  <div class="container display-container padding-16">
+    <i onclick="w3_close()" class="fa fa-remove hide-large button display-topright"></i>
+    <h3 class="wide"><b><a href="../index.html"><img src="../Totally Teen.png" style="width:150px;height:150px;"></a></b></h3>
+  </div>
+  <div class="padding-32 large text-grey" style="font-weight:bold">
+    <a id="allbutton" class="bar-item button" onclick= "allSelected()" >All</a>
+    <a id="restaurantbutton" class="bar-item button" onclick= "restaurantsSelected()" >Restaurants</a>
+    <a id = "activitybutton" class="bar-item button" onclick= "activitiesSelected()" >Activities</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="button block white left-align" id="myBtn">
+      Prices <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="bar-block hide padding-large medium">
+      <p id="freebutton" onclick= "tier0selected()" class="bar-item button">Free</a>
+      <p id="onedollarbutton" onclick ="tier1selected()" class="bar-item button">$</a>
+      <p id="twodollarbutton" onclick="tier2selected()" class="bar-item button">$$</a>
+      <p id="threedollarbutton" onclick="tier3selected()" class="bar-item button">$$$</a>
+    </div>
+  </div>
+  <a href="#footer" class="bar-item button padding">Contact</a>
+  <a href="javascript:void(0)" class="bar-item button padding" onclick="document.getElementById('Follow').style.display='block'">Follow</a>
+  <a href="#footer"  class="bar-item button padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bar top hide-large black xlarge">
+  <div class="bar-item padding-24 wide">Giulianna is making the logo!</div>
+  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="container xlarge">
+    <p class="left">California</p>
+    <p class="right">
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="display-container container">
+    <img src="http://www.beaurogers.com/wp-content/uploads/2014/02/WebHDRLosAngeles-1024x683.jpg" alt="Los Angeles" style="width:100%">
+    <div class="display-topleft text-white" style="padding:24px 48px">
+      <h1 class="jumbo hide-small">Los Angeles</h1>
+      <h1 class="hide-large hide-medium">Los Angeles</h1>
+    </div>
+  </div>
+
+  <div class="container text-grey" id="jeans">
+    <p>10 items</p>
+  </div>
+
+  <div id="modal01" class="modal black" onclick="this.style.display='none'">
+    <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="modal-content animate-zoom center transparent padding-64">
+      <img id="img01" class="image">
+      <p id="caption" class="opacity large"></p>
+    </div>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div class="content container padding-64" id="portfolio">
+
+<!--ROW 1-->
+    <div class="row-padding center">
+      <div class="col m4" tier=0 category=activity>
+        <a href="the-broad.html"><img src="https://bloximages.chicago2.vip.townnews.com/ladowntownnews.com/content/tncms/assets/v3/editorial/9/01/9010f556-80e1-11e6-ab72-73bfeefa25e8/57e406cdb0741.image.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="The Broad"></a>
+        <p>The Broad<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=0 category=activity>
+        <a href="urban-light.html"><img src="https://media.nbclosangeles.com/images/653*367/lacmaurbanlight.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Six Flags"></a>
+        <p>Urban Light<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=activity>
+        <a href="griffith-observatory.html"><img src="https://www.tripsavvy.com/thmb/JcChYRMkI9WzxbZaC9mNJnzVPX4=/4294x2863/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-627925478-5c63259c46e0fb0001dcd722.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Urban Light"></a>
+        <p>Griffith Observatory<br><b>$</b></p>
+      </div>
+    </div>
+
+<!--ROW 2-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=activity>
+        <a href="museum-of-illusions.html"><img src="https://cdn.abcotvs.com/dip/images/3329546_041118-kabc-museum-of-illusions-2-img.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Museum of Illusions"></a>
+        <p>Museum of Illusions<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=0 category=activity>
+      <a href="venice-beach.html"><img src="https://stage.visitcalifornia.com/sites/default/files/styles/welcome_image/public/VC_California101_VeniceBeach_Stock_RF_638340372_1280x640.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Venice Beach"></a>
+      <p>Venice Beach<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="wild-fig-kitchen.html"><img src="https://www.mercurynews.com/wp-content/uploads/2019/01/SJM-L-YOSEEATS-0127-1.jpg?w=620" style="width:300px;height:200px;"  class="hover-opacity" alt="Wild Fig Kitchen"></a>
+        <p>Wild Fig Kitchen<br>$$</b></p>
+      </div>
+    </div>
+
+<!--ROW 3-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="happy-burger-diner.html"><img src="http://www.erench.com/RESTAUR/CALIF/CECAL/HBD/20160614_116.JPG" style="width:300px;height:200px;"  class="hover-opacity" alt="Happy Burger Diner"></a>
+        <p>Happy Burger Diner<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+      <a href="howlin-rays.html"><img src="https://s3.amazonaws.com/media.citizine.tv/uploads/2017/08/04/howlin-sandwiches.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Howlin Ray's"></a>
+        <p>Howlin Ray's<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=restaurant>
+        <a href="eggslut.html"><img src="https://i.ytimg.com/vi/ZnwrF4heqeU/maxresdefault.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Eggslut"></a>
+      <p>Eggslut<br><b>$</b></p>
+    </div>
+  </div>
+
+<!--ROW 4-->
+    <div class="row-padding center">
+      <div class="col m4" tier=1 category=restaurant>
+        <a href="somi-somi.html"><img src="https://kirbiecravings.com/wp-content/uploads/2017/10/somi-somi-2ab.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Somi Somi"></a>
+        <p>Somi Somi<br><b>$</b></p>
+      </div>
+</div>
+<br>
+<br>
+
+  <!-- Footer -->
+   <footer class="padding-32 light-grey small center" id="footer">
+    <div class="row-padding">
+        <center><h4>Contact</h4>
+        <p>Questions? Go ahead.</p></center>
+      <form action="/action_page.php" target="_blank">
+        <div class="row-padding" style="margin:0 -16px 8px -16px">
+          <div class="half">
+            <input class="input border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="half">
+            <input class="input border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="input border" type="text" placeholder="Message" required name="Message">
+        <button class="button black right section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center><div class="col">
+        <a href="https://www.facebook.com/TotallyTeen4/"><i class="fa fa-facebook-official hover-opacity"></i></a>
+        <a href="https://www.instagram.com/totallyteen4/?hl=en"><i class="fa fa-instagram hover-opacity"></i></a>
+        <a href="https://pin.it/4yshwqwmbcg7v7"><i class="fa fa-pinterest-p hover-opacity"></i></a>
+      </div>
+    </center>
+    </div>
+  </footer>
+
+</body>
+</html>
