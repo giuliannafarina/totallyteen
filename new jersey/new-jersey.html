@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<title>New Jersey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../totallyteen.css">
+<script src="../totallyteen.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="sidebar bar-block white collapse top" style="z-index:3;width:200px" id="mySidebar">
+  <div class="container display-container padding-16">
+    <i onclick="w3_close()" class="fa fa-remove hide-large button display-topright"></i>
+    <h3 class="wide"><b><a href="../index.html"><img src="../Totally Teen.png" style="width:150px;height:150px;"></a></b></h3>
+  </div>
+  <div class="padding-32 large text-grey" style="font-weight:bold">
+    <a id="allbutton" class="bar-item button" onclick= "allSelected()" >All</a>
+    <a id="restaurantbutton" class="bar-item button" onclick= "restaurantsSelected()" >Restaurants</a>
+    <a id = "activitybutton" class="bar-item button" onclick= "activitiesSelected()" >Activities</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="button block white left-align" id="myBtn">
+      Prices <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="bar-block hide padding-large medium">
+      <p id="freebutton" onclick= "tier0selected()" class="bar-item button">Free</a>
+      <p id="onedollarbutton" onclick ="tier1selected()" class="bar-item button">$</a>
+      <p id="twodollarbutton" onclick="tier2selected()" class="bar-item button">$$</a>
+      <p id="threedollarbutton" onclick="tier3selected()" class="bar-item button">$$$</a>
+    </div>
+  </div>
+  <a href="#footer" class="bar-item button padding">Contact</a>
+  <a href="javascript:void(0)" class="bar-item button padding" onclick="document.getElementById('Follow').style.display='block'">Follow</a>
+  <a href="#footer"  class="bar-item button padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bar top hide-large black xlarge">
+  <div class="bar-item padding-24 wide">New Jersey</div>
+  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="container xlarge">
+    <p class="left">New Jersey</p>
+    <p class="right">
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="display-container container">
+    <img src="https://www.visittheusa.com/sites/default/files/styles/16_9_1280x720/public/images/featured_media_image/2016-10/NJ%204.png?itok=JZpjysUr" alt="Jersey Shore" style="width:100%">
+    <div class="display-topleft text-white" style="padding:24px 48px">
+      <h1 class="jumbo hide-small">Jersey Shore</h1>
+      <h1 class="hide-large hide-medium">Jersey Shore</h1>
+      <p><a href="#jeans" class="button black padding-large large">Explore Now</a></p>
+    </div>
+  </div>
+
+  <div class="container text-grey" id="jeans">
+    <p>15 items</p>
+  </div>
+
+  <div id="modal01" class="modal black" onclick="this.style.display='none'">
+    <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="modal-content animate-zoom center transparent padding-64">
+      <img id="img01" class="image">
+      <p id="caption" class="opacity large"></p>
+    </div>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div class="content container padding-64" id="portfolio">
+
+<!--ROW 1-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=activity>
+        <a href="diggerland.html"><img src="https://midatlantic.aaa.com/-/media/Images/Ecommerce/__Online-Store/Entertainment/Attractions/New-Jersey/Diggerland-USA/Diggerland_1.ashx" style="width:300px;height:200px;" class="hover-opacity" alt="Diggerland" ></a>
+        <p>Diggerland<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+        <a href="six-flags.html"><img src="http://media.nj.com/ledgerupdates_impact/photo/2010/07/six-flags-great-adventure-power-outagejpg-3fae7c2c283a8889_large.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Six Flags"></a>
+        <p>Six Flags Great Adventure<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=activity>
+        <a href="grounds-for-sculpture.html"><img src="https://www.happyfamilyart.com/wp-content/uploads/2014/08/GroundsForScultputre20142.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Grounds for Scultpure"></a>
+        <p>Grounds for Scultpure<br><b>$</b></p>
+      </div>
+    </div>
+
+<!--ROW 2-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=activity>
+        <a href="top-golf.html"><img src="https://cdn.topgolf.com/assets/galleries/50934/5500_edison-Single-Bay-01.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Top Golf"></a>
+        <p>Top Golf<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+      <a href="dave-and-busters.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/11/5d/ca/c8/arcade.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Dave & Busters"></a>
+      <p>Dave & Busters<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=activity>
+        <a href="drive-in.html"><img src="https://www.broadstreetreview.com/images/uploads/posts/_framed/MVIdwaHO-640-408.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Delsea Drive-In Theatre"></a>
+        <p>Delsea Drive-In Theatre<br>$</b></p>
+      </div>
+    </div>
+
+<!--ROW 3-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=activity>
+        <a href="bury.html"><img src="https://i.ytimg.com/vi/u4Si3f9OdEQ/maxresdefault.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Bury the Hatchet"></a>
+        <p>Bury the Hatchet<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=activity>
+        <a href="seaside.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/b3/f8/10/amusement-park-from-the.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Seaside Heights"></a>
+        <p>Seaside Heights<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+        <a href="raceway.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/11/36/fc/39/track.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="RPM Raceway"></a>
+      <p>RPM Raceway<br><b>$$</b></p>
+    </div>
+  </div>
+
+<!--ROW 4-->
+    <div class="row-padding center">
+      <div class="col m4" tier=3 category=activity>
+        <a href="sojo-spa.html"><img src="https://i.pinimg.com/474x/12/28/14/12281486f119fd5a754eff8c0fa3a1be.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Sojo Spa Club"></a>
+        <p>Sojo Spa Club<br><b>$$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="Talulas.html"><img src="https://img.theculturetrip.com/768x432/wp-content/uploads/2018/01/portaap_margherita2_andrewholtz.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Talula’s Pizza"></a>
+      <p>Talula’s Pizza<br><b>$$</b></p>
+    </div>
+
+      <div class="col m4" tier=1 category=restaurant>
+        <a href="inkwell.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8UhWNEvEbYLy_07hMNdvv2_g0cXgXyRbaLzwIKGWsFIN2mz8M_g" style="width:300px;height:200px;"  class="hover-opacity" alt="Inkwell Coffee House"></a>
+      <p>Inkwell Coffee House<br><b>$</b></p>
+      </div>
+    </div>
+
+<!--Restaurants (2 are in row 4 but the rest fall under row 5 and below) (alternate Restaurants and Activities for ALL tab but then seperate in designated tabs)-->
+<!--ROW 5-->
+    <div class="row-padding center">
+      <div class="col m4" tier=1 category=restaurant>
+        <a href="surf-taco.html"><img src="https://28nwgk2wx3p52fe6o9419sg5-wpengine.netdna-ssl.com/wp-content/uploads/2017/10/surf-taco-princeton-nj-1.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Surf Taco"></a>
+        <p>Surf Taco<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+      <a href="bite.html"><img src="http://4e3tuo3do51baai522lhhji4-wpengine.netdna-ssl.com/wp-content/uploads/2019/03/coffee-free-0833-600x399.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Bite Food & Coffee Co"></a>
+      <p>Bite Food & Coffee Co<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=3 category=restaurant>
+        <a href="porta.html"><img src="https://s3-media4.fl.yelpcdn.com/bphoto/KsGRgPLqB-1Zq2kQTE4bNw/ls.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Porta Pizza"></a>
+      <p>Porta Pizza<br><b>$$$</b></p>
+      </div>
+    </div>
+</div>
+<br>
+<br>
+
+  <!-- Footer -->
+   <footer class="padding-32 light-grey small center" id="footer">
+    <div class="row-padding">
+        <center><h4>Contact</h4>
+        <p>Questions? Go ahead.</p></center>
+      <form action="/action_page.php" target="_blank">
+        <div class="row-padding" style="margin:0 -16px 8px -16px">
+          <div class="half">
+            <input class="input border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="half">
+            <input class="input border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="input border" type="text" placeholder="Message" required name="Message">
+        <button class="button black right section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center><div class="col">
+        <a href="https://www.facebook.com/TotallyTeen4/"><i class="fa fa-facebook-official hover-opacity"></i></a>
+        <a href="https://www.instagram.com/totallyteen4/?hl=en"><i class="fa fa-instagram hover-opacity"></i></a>
+        <a href="https://pin.it/4yshwqwmbcg7v7"><i class="fa fa-pinterest-p hover-opacity"></i></a>
+      </div>
+    </center>
+    </div>
+  </footer>
+
+<!-- Footer -->
+<!-- <footer class="center black padding-16 opacity hover-opacity-off">
+  <center>
+  <a href="#home" class="button light-grey"><i class="fa fa-arrow-up margin-right"></i>To the top</a>
+  <div class="xlarge section">
+    <i class="fa fa-facebook-official hover-opacity"></i>
+    <i class="fa fa-instagram hover-opacity"></i>
+    <i class="fa fa-snapchat hover-opacity"></i>
+    <i class="fa fa-pinterest-p hover-opacity"></i>
+    <i class="fa fa-twitter hover-opacity"></i>
+    <i class="fa fa-linkedin hover-opacity"></i>
+  </div>
+</center>
+</footer> -->
+
+</body>
+</html>
