@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<title>New York</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../totallyteen.css">
+<script src="../totallyteen.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="sidebar bar-block white collapse top" style="z-index:3;width:200px" id="mySidebar">
+  <div class="container display-container padding-16">
+    <i onclick="w3_close()" class="fa fa-remove hide-large button display-topright"></i>
+    <h3 class="wide"><b><a href="../index.html"><img src="../Totally Teen.png" style="width:150px;height:150px;"></a></b></h3>
+  </div>
+  <div class="padding-32 large text-grey" style="font-weight:bold">
+    <a id="allbutton" class="bar-item button" onclick= "allSelected()" >All</a>
+    <a id="restaurantbutton" class="bar-item button" onclick= "restaurantsSelected()" >Restaurants</a>
+    <a id = "activitybutton" class="bar-item button" onclick= "activitiesSelected()" >Activities</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="button block white left-align" id="myBtn">
+      Prices <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="bar-block hide padding-large medium">
+      <p id="freebutton" onclick= "tier0selected()" class="bar-item button">Free</a>
+      <p id="onedollarbutton" onclick ="tier1selected()" class="bar-item button">$</a>
+      <p id="twodollarbutton" onclick="tier2selected()" class="bar-item button">$$</a>
+      <p id="threedollarbutton" onclick="tier3selected()" class="bar-item button">$$$</a>
+    </div>
+  </div>
+  <a href="#footer" class="bar-item button padding">Contact</a>
+  <a href="javascript:void(0)" class="bar-item button padding" onclick="document.getElementById('Follow').style.display='block'">Follow</a>
+  <a href="#footer"  class="bar-item button padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bar top hide-large black xlarge">
+  <div class="bar-item padding-24 wide">New York</div>
+  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="container xlarge">
+    <p class="left">New York</p>
+    <p class="right">
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="display-container container">
+    <img src="https://timandjulieharris.com/wp-content/uploads/2019/04/manhattan-brooklyn-and-queens-markets-in-february-2019-img-04032019-1.jpg" alt="Tri-State Area" style="width:100%">
+    <div class="display-topleft text-white" style="padding:24px 48px">
+      <h1 class="jumbo hide-small">Manhattan & Queens</h1>
+      <h1 class="hide-large hide-medium">Manhattan</h1>
+
+    </div>
+  </div>
+
+  <div class="container text-grey" id="jeans">
+    <p>24 items</p>
+  </div>
+
+  <div id="modal01" class="modal black" onclick="this.style.display='none'">
+    <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="modal-content animate-zoom center transparent padding-64">
+      <img id="img01" class="image">
+      <p id="caption" class="opacity large"></p>
+    </div>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div class="content container padding-64" id="portfolio">
+
+<!--ROW 1-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="eggloo.html"><img src="https://cdn.foodandwineespanol.com/2018/04/eggloo.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Eggloo"></a>
+        <p>Eggloo<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+        <a href="brookfield.html"><img src="https://cdn.bisnow.net/fit?height=489&type=jpeg&url=https%3A%2F%2Fs3.amazonaws.com%2Fcdn.bisnow.net%2Fcontent%2Fimages%2F2019%2F03%2F5c928759a8edc-brookfield-place-atrium.jpeg&width=717&sign=MJm5kyKPz2L5brF2ZlHVIr01bI36Z6Lmd2jruDshcZE" style="width:300px;height:200px;"  class="hover-opacity" alt="Brookfield Place"></a>
+        <p>Brookfield Place<br><b>$$-$$$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=activity>
+        <a href="vessel.html"><img src="https://inteng-storage.s3.amazonaws.com/images/MARCH/sizes/theVesselNYCHudsonYards10_resize_md.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="The Vessel"></a>
+        <p>The Vessel<br><b>$</b></p>
+      </div>
+    </div>
+
+<!--ROW 2-->
+    <div class="row-padding center">
+      <div class="col m4" tier=0 category=activity>
+        <a href="high-line.html"><img src="https://media.timeout.com/images/102540127/630/472/image.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="NYC High Line"></a>
+        <p>NYC High Line<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=0 category=activity>
+      <a href="bryant.html"><img src="https://loving-newyork.com/wp-content/uploads/2016/05/Bryant-Park-New-York-City-180508105745001-1600x960.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Bryant Park"></a>
+      <p>Bryant Park<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+        <a href="luna-park.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ojtUTvpimazRQhiAjuSgWTivukVQ-UJg7ysP05varJW6o-JclQ" style="width:300px;height:200px;"  class="hover-opacity" alt="Luna Park Coney Island"></a>
+        <p>Luna Park Coney Island<br>$$</b></p>
+      </div>
+    </div>
+
+<!--ROW 3-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=activity>
+        <a href="dylans-candy-bar.html"><img src="https://www.hudsonyardsnewyork.com/sites/default/files/styles/content_detail/public/acquia-dam-assets/2019-02/Approved_lollipops_website.jpeg?itok=xT0JFJJ3" style="width:300px;height:200px;"class="hover-opacity" alt="Dylan's Candy Bar"></a>
+        <p>Dylan's Candy Bar<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=activity>
+      <a href="brooklyn-bridge.html"><img src="https://untappedcities-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/Brooklyn-Bridge-from-Empire-Stores-Dumbo-NYC.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Wu Kong"></a>
+        <p>Brooklyn Bridge<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+        <a href="color-factory.html"><img src="https://www.metro.us/sites/default/files/styles/amp_normal_article/public/main/articles/color-factory-nyc-2018-soho.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Color Factory"></a>
+      <p>Color Factory<br><b>$$</b></p>
+    </div>
+  </div>
+
+<!--ROW 4-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=activity>
+        <a href="soho.html"><img src="https://ifly-selections-axaxzmkc.netdna-ssl.com/10301486-klm-selections/content/image/_f_large/Shoppen_Soho_01_Header-Original-1509551384.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Soho"></a>
+        <p>Soho<br><b>$$-$$$</b></p>
+      </div>
+
+      <div class="col m4" tier=0 category=activity>
+        <a href="gantry-plaza.html"><img src="http://frugalfrolicker.com/wp-content/uploads/2014/04/nyc-gantry.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Gantry Pizza State Park"></a>
+      <p>Gantry Plaza State Park<br><b>Free</b></p>
+    </div>
+
+      <div class="col m4" tier=0 category=activity>
+        <a href="rockefeller.html"><img src="https://www.omnihotels.com/-/media/images/hotels/nycber/destinations/rockefeller-center-shutterstock-342167966.jpg?h=660&la=en&w=1170" style="width:300px;height:200px;"class="hover-opacity" alt="Rockefellar Center"></a>
+      <p>Rockefeller Center<br><b>Free</b></p>
+      </div>
+    </div>
+
+<!--Restaurants (2 are in row 4 but the rest fall under row 5 and below) (alternate Restaurants and Activities for ALL tab but then seperate in designated tabs)-->
+<!--ROW 5-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="sugar-factory.html"><img src="https://www.wlox.com/resizer/KgJ-GEEXkf6reKhLrOTJqfRX_Yw=/0x266:1400x966/1400x700/arc-anglerfish-arc2-prod-raycom.s3.amazonaws.com/public/MYCUQYGQIRD4DEZA3KRZKN5XBA.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Sugar Factory"></a>
+        <p>Sugar Factory<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+      <a href="black-tap.html"><img src="https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2019/04/wrhby7647y9uip3-624x351.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Black Tap Craft Burgers & Beer"></a>
+        <p>Black Tap Craft Burgers & Beer<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=restaurant>
+        <a href="smorgasburg.html"><img src="https://images.squarespace-cdn.com/content/58a0d691ff7c50486df2c34c/1487015217295-N5U5SNPAFW4V0UN0UOZM/JvP_092714_0457_print.jpg?format=1500w&content-type=image%2Fjpeg" style="width:300px;height:200px;"class="hover-opacity" alt="Smorgasburg"></a>
+      <p>Smorgasburg<br><b>$</b></p>
+      </div>
+    </div>
+
+<!-- ROW 6-->
+    <div class="row-padding center">
+      <div class="col m4" tier=1 category=restaurant>
+        <a href="emoji-burger.html"><img src="https://s3-media3.fl.yelpcdn.com/bphoto/xTZdfp-7HBrh5hmbZr9SOA/168s.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Emoji Burger"></a>
+        <p>Emoji Burger<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+      <a href="spaghetti-incident.html"><img src="https://d37219swed47g7.cloudfront.net/media/images/reviews/spaghetti-incident/banners/1478728042.85.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Spaghetti Incident"></a>
+        <p>Spaghetti Incident<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="pietro-nolito.html"><img src="https://thedownlo.com/wp-content/uploads/2018/07/most-instagrammable-places-in-nyc-thumb-580x467.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Pietro Nolito"></a>
+      <p>Pietro Nolito<br><b>$$</b></p>
+      </div>
+    </div>
+
+<!--ROW 7-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="gelso-grand.html"><img src="https://storage.googleapis.com/zagat-user/gelso3.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Gelso & Grand"></a>
+        <p>Gelso & Grand<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=3 category=restaurant>
+      <a href="nomo.html"><img src="https://www.nomosoho.com/assets/images/kitchen/nomo-soho-kitchen.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="NOMO Kitchen"></a>
+        <p>NOMO Kitchen<br><b>$$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="skinnys.html"><img src="https://media.timeout.com/images/100499009/630/472/image.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Skinny's Cantina"></a>
+      <p>Skinny's Cantina<br><b>$$</b></p>
+      </div>
+    </div>
+
+<!--ROW 8-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="pollos-marios.html"><img src="http://taxigourmet.com/wp-content/uploads/2010/10/mario-exterior.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Pollos Marios"></a>
+        <p>Pollos Marios<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=restaurant>
+      <a href="taqueria.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/03/f2/83/1e/taqueria-el-fogon.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Taqueria El Fogon"></a>
+        <p>Taqueria El Fogon<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="ippudo.html"><img src="https://cdn.vox-cdn.com/thumbor/oogXxIwoBMWvijG3GqRSp6PuA4c=/0x0:1000x750/1200x800/filters:focal(420x295:580x455)/cdn.vox-cdn.com/uploads/chorus_image/image/54789783/ippudo_ny.0.jpg" style="width:300px;height:200px;"class="hover-opacity" alt="Ippudo NY"></a>
+      <p>Ippudo NY<br><b>$$</b></p>
+      </div>
+    </div>
+</div>
+<br>
+<br>
+
+  <!-- Footer -->
+   <footer class="padding-32 light-grey small center" id="footer">
+    <div class="row-padding">
+        <center><h4>Contact</h4>
+        <p>Questions? Go ahead.</p></center>
+      <form action="/action_page.php" target="_blank">
+        <div class="row-padding" style="margin:0 -16px 8px -16px">
+          <div class="half">
+            <input class="input border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="half">
+            <input class="input border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="input border" type="text" placeholder="Message" required name="Message">
+        <button class="button black right section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center><div class="col">
+        <a href="https://www.facebook.com/TotallyTeen4/"><i class="fa fa-facebook-official hover-opacity"></i></a>
+        <a href="https://www.instagram.com/totallyteen4/?hl=en"><i class="fa fa-instagram hover-opacity"></i></a>
+        <a href="https://pin.it/4yshwqwmbcg7v7"><i class="fa fa-pinterest-p hover-opacity"></i></a>
+      </div>
+    </center>
+    </div>
+  </footer>
+
+</body>
+</html>
