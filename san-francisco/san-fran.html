@@ -1,0 +1,188 @@
+<a href=""><!DOCTYPE html>
+<html>
+<title>San Francisco, San Francisco, California</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../totallyteen.css">
+<script src="../totallyteen.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="sidebar bar-block white collapse top" style="z-index:3;width:200px" id="mySidebar">
+  <div class="container display-container padding-16">
+    <i onclick="w3_close()" class="fa fa-remove hide-large button display-topright"></i>
+    <h3 class="wide"><b><a href="../index.html"><img src="../Totally Teen.png" style="width:150px;height:150px;"></a></b></h3>
+  </div>
+  <div class="padding-32 large text-grey" style="font-weight:bold">
+    <a id="allbutton" class="bar-item button" onclick= "allSelected()" >All</a>
+    <a id="restaurantbutton" class="bar-item button" onclick= "restaurantsSelected()" >Restaurants</a>
+    <a id = "activitybutton" class="bar-item button" onclick= "activitiesSelected()" >Activities</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="button block white left-align" id="myBtn">
+      Prices <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="bar-block hide padding-large medium">
+      <p id="freebutton" onclick= "tier0selected()" class="bar-item button">Free</a>
+      <p id="onedollarbutton" onclick ="tier1selected()" class="bar-item button">$</a>
+      <p id="twodollarbutton" onclick="tier2selected()" class="bar-item button">$$</a>
+      <p id="threedollarbutton" onclick="tier3selected()" class="bar-item button">$$$</a>
+    </div>
+  </div>
+  <a href="#footer" class="bar-item button padding">Contact</a>
+  <a href="javascript:void(0)" class="bar-item button padding" onclick="document.getElementById('Follow').style.display='block'">Follow</a>
+  <a href="#footer"  class="bar-item button padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bar top hide-large black xlarge">
+  <div class="bar-item padding-24 wide">Giulianna is making the logo!</div>
+  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="container xlarge">
+    <p class="left">California</p>
+    <p class="right">
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="display-container container">
+    <img src="https://amp.businessinsider.com/images/5ce80b2b22bc8d6463307616-750-563.jpg" alt="San Francisco" style="width:100%">
+    <div class="display-topleft text-white" style="padding:24px 48px">
+      <h1 class="jumbo hide-small">San Francisco</h1>
+      <h1 class="hide-large hide-medium">San Francisco</h1>
+
+    </div>
+  </div>
+
+  <div class="container text-grey" id="jeans">
+    <p>10 items</p>
+  </div>
+
+  <div id="modal01" class="modal black" onclick="this.style.display='none'">
+    <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="modal-content animate-zoom center transparent padding-64">
+      <img id="img01" class="image">
+      <p id="caption" class="opacity large"></p>
+    </div>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div class="content container padding-64" id="portfolio">
+
+<!--ROW 1-->
+    <div class="row-padding center">
+      <div class="col m4" tier=0 category=activity>
+        <a href="palace-of-fine-arts.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/01/8d/78/59/night-visit-what-a-difference.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Palace of Fine Arts"></a>
+        <p>Palace of Fine Arts<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=0 category=activity>
+        <a href="painted-ladies.html"><img src="https://cdn.unifiedcommerce.com/content/product/large/8412668171190.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="The Painted Ladies"></a>
+        <p>The Painted Ladies<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=0 category=activity>
+        <a href="dragons-gate.html"><img src="https://live.staticflickr.com/7618/16298009764_cf2a2cb356_b.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Dragon's Gate"></a>
+        <p>Dragon's Gate<br><b>Free</b></p>
+      </div>
+    </div>
+
+<!--ROW 2-->
+    <div class="row-padding center">
+      <div class="col m4" tier=0 category=activity>
+        <a href=""><img src="https://www.tripsavvy.com/thmb/fqIAjZaVUoY6GQ8sA3WBgVTksTg=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-109287627-5b66fb4f46e0fb0050fabc66.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Union Sqaure"></a>
+        <p>Union Square<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+      <a href="ferry-building.html"><img src="https://ocbj.media.clients.ellingtoncms.com/img/photos/2018/10/08/SF_FerryBuilding_t670.jpg?b3f6a5d7692ccc373d56e40cf708e3fa67d9af9d" style="width:300px;height:200px;"  class="hover-opacity" alt="Ferry Building"></a>
+      <p>Ferry Building<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="hog-island-oysters.html"><img src="https://hogislandoysters.com/images/uploads/location_intro/Hog-Island-Oyster-Bar-NEW-INTRO-PAGE.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Hog Island Oysters"></a>
+        <p>Hog Island Oysters<br>$$</b></p>
+      </div>
+    </div>
+
+<!--ROW 3-->
+    <div class="row-padding center">
+      <div class="col m4" tier=3 category=restaurant>
+        <a href="restaurant-gary-danko.html"><img src="https://www.travoh.com/wp-content/uploads/2019/06/06-Gary-Danko-Restaurant-800-North-Point-St-San-Francisco-CA-USA.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Restaurant Gary Danko"></a>
+        <p>Restaurant Gary Danko<br><b>$$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+      <a href=""><img src="https://b.zmtcdn.com/data/pictures/4/16861924/5413147307749768501fe66ef99d2f03_featured_v2.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Sotto Mare Oysteria Seafood"></a>
+        <p>Sotto Mare Oysteria Seafood<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=restaurant>
+        <a href=""><img src="https://raster-static.postmates.com/?url=com.postmates.img.prod.s3.amazonaws.com/7f65e726-4d27-41e0-93f9-6eabf73607fd/orig.jpg&quality=90&w=1500&h=900&mode=crop&format=jpg&v=4" style="width:300px;height:200px;"  class="hover-opacity" alt="Mitchelle's Ice Cream"></a>
+      <p>Mitchelle's Ice Cream<br><b>$</b></p>
+    </div>
+  </div>
+
+<!--ROW 4-->
+    <div class="row-padding center">
+      <div class="col m4" tier=1 category=restaurant>
+        <a href=""><img src="https://i.pinimg.com/originals/a7/f3/35/a7f3356fbe1688f420b3ba1e35d734ab.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Loving Cup"></a>
+        <p>Loving Cup<br><b>$</b></p>
+      </div>
+</div>
+<br>
+<br>
+
+  <!-- Footer -->
+   <footer class="padding-32 light-grey small center" id="footer">
+    <div class="row-padding">
+        <center><h4>Contact</h4>
+        <p>Questions? Go ahead.</p></center>
+      <form action="/action_page.php" target="_blank">
+        <div class="row-padding" style="margin:0 -16px 8px -16px">
+          <div class="half">
+            <input class="input border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="half">
+            <input class="input border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="input border" type="text" placeholder="Message" required name="Message">
+        <button class="button black right section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center><div class="col">
+        <a href="https://www.facebook.com/TotallyTeen4/"><i class="fa fa-facebook-official hover-opacity"></i></a>
+        <a href="https://www.instagram.com/totallyteen4/?hl=en"><i class="fa fa-instagram hover-opacity"></i></a>
+        <a href="https://pin.it/4yshwqwmbcg7v7"><i class="fa fa-pinterest-p hover-opacity"></i></a>
+      </div>
+    </center>
+    </div>
+  </footer>
+
+</body>
+</html>
