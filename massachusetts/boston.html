@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<title>Boston, Massachusetts</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../totallyteen.css">
+<script src="../totallyteen.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="sidebar bar-block white collapse top" style="z-index:3;width:200px" id="mySidebar">
+  <div class="container display-container padding-16">
+    <i onclick="w3_close()" class="fa fa-remove hide-large button display-topright"></i>
+    <h3 class="wide"><b><a href="../index.html"><img src="../Totally Teen.png" style="width:150px;height:150px;"></a></b></h3>
+  </div>
+  <div class="padding-32 large text-grey" style="font-weight:bold">
+    <a id="allbutton" class="bar-item button" onclick= "allSelected()" >All</a>
+    <a id="restaurantbutton" class="bar-item button" onclick= "restaurantsSelected()" >Restaurants</a>
+    <a id = "activitybutton" class="bar-item button" onclick= "activitiesSelected()" >Activities</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="button block white left-align" id="myBtn">
+      Prices <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="bar-block hide padding-large medium">
+      <p id="freebutton" onclick= "tier0selected()" class="bar-item button">Free</a>
+      <p id="onedollarbutton" onclick ="tier1selected()" class="bar-item button">$</a>
+      <p id="twodollarbutton" onclick="tier2selected()" class="bar-item button">$$</a>
+      <p id="threedollarbutton" onclick="tier3selected()" class="bar-item button">$$$</a>
+    </div>
+  </div>
+  <a href="#footer" class="bar-item button padding">Contact</a>
+  <a href="javascript:void(0)" class="bar-item button padding" onclick="document.getElementById('Follow').style.display='block'">Follow</a>
+  <a href="#footer"  class="bar-item button padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bar top hide-large black xlarge">
+  <div class="bar-item padding-24 wide">Giulianna is making the logo!</div>
+  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="container xlarge">
+    <p class="left">Massachusetts</p>
+    <p class="right">
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="display-container container">
+    <img src="https://www.langan.com/wp-content/uploads/2019/02/Boston-996x554.jpg" alt="Chicago Area" style="width:100%">
+    <div class="display-topleft text-white" style="padding:24px 48px">
+      <h1 class="jumbo hide-small">Boston</h1>
+      <h1 class="hide-large hide-medium">Massachusetts</h1>
+      <p><a href="#jeans" class="button black padding-large large">Explore Now</a></p>
+    </div>
+  </div>
+
+  <div class="container text-grey" id="jeans">
+    <p>18 items</p>
+  </div>
+
+  <div id="modal01" class="modal black" onclick="this.style.display='none'">
+    <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="modal-content animate-zoom center transparent padding-64">
+      <img id="img01" class="image">
+      <p id="caption" class="opacity large"></p>
+    </div>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div class="content container padding-64" id="portfolio">
+
+<!--ROW 1-->
+    <div class="row-padding center">
+      <div class="col m4" tier=1 category=activity>
+        <a href="museum-of-fine-arts.html"><img src="https://media.cntraveler.com/photos/5b47a08d4b1b564ac0e61d6c/master/pass/Museum-of-Fine-Arts,-Boston__2018_MFA-Boston_Koch-Gallery.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Museum of Fine Arts"></a>
+        <p>Museum of Fine Arts<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=activity>
+        <a href="fenway-park.html"><img src="https://cdn.britannica.com/s:500x350/11/125711-004-47587528.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Fenway Park"></a>
+        <p>Fenway Park<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+        <a href="new-england-aquarium.html"><img src="https://res.cloudinary.com/mommy-nearest/image/upload/c_fill,h_400,w_900/dq3hvdwux8xigqhmt4j0.png" style="width:300px;height:200px;"  class="hover-opacity" alt="New England Aquarium"></a>
+        <p>New England Aquarium<br><b>$$</b></p>
+      </div>
+    </div>
+
+<!--ROW 2-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=activity>
+        <a href="duck-tours.html"><img src="https://www.prudentialcenter.com/i/tenant/image/bostonducktours.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Boston Duck Tour"></a>
+        <p>Boston Duck Tour<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=activity>
+      <a href="skywalk.html"><img src="https://cache-graphicslib.viator.com/graphicslib/page-images/742x525/168622_shutterstock_59022034.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Skywalk Observatory"></a>
+      <p>Skywalk Observatory<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=0 category=activity>
+        <a href="revere-beach.html"><img src="https://cdn.securesyte.com/GB7r14nbKy-1182/images/slider/ScreenShot2018-03-18at5-115.05.56PM-Edit.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Revere Beach"></a>
+        <p>Revere Beach<br><b>Free</b></p>
+      </div>
+    </div>
+
+<!--ROW 3-->
+    <div class="row-padding center">
+      <div class="col m4" tier=1 category=activity>
+        <a href="swan-boat-rides.html"><img src="http://visitingnewengland.com/blog-cheap-travel/wp-content/uploads/2015/04/swan-boats-boston-public-garden.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Swan Boat Ride"></a>
+        <p>Swan Boat Ride<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=activity>
+      <a href="taza.html"><img src="https://cdn.shopify.com/s/files/1/0974/7668/files/Taza-Chocolate-Factory-Store_1024x1024.jpg?v=1474918981" style="width:300px;height:200px;"  class="hover-opacity" alt="Taza Chocolate Factory"></a>
+        <p>Taza Chocolate Factory<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=activity>
+        <a href="mapparium.html"><img src="https://newengland.com/wp-content/uploads/Mapparium-780x522.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Mapparium"></a>
+      <p>Mapparium<br><b>$</b></p>
+    </div>
+  </div>
+
+<!--ROW 4-->
+    <div class="row-padding center">
+      <div class="col m4" tier=1 category=restaurant>
+        <a href="Mmmac.html"><img src="https://s3-media4.fl.yelpcdn.com/bphoto/-m0pz0zWCQNZtapPtpGsrQ/l.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Mmmac n Cheese"></a>
+        <p>Mmmac n Cheese<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="bell-in-hand.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/08/38/18/a6/outside-the-bell-in-hand.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="The Bell in Hand"></a>
+      <p>The Bell in Hand<br><b>$$</b></p>
+    </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="fire-and-ice.html"><img src="https://fire-ice.com/wp-content/uploads/2014/09/i9a0544_1stedit_webready.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Fire and Ice"></a>
+      <p>Fire and Ice<br><b>$$</b></p>
+      </div>
+    </div>
+
+<!--ROW 5-->
+      <div class="row-padding center">
+        <div class="col m4" tier=2 category=restaurant>
+            <a href="pizzeria-regina.html"><img src="https://assets3.thrillist.com/v1/image/1820072/size/tmg-venue_carousel_mobile.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Pizzeria Regina"></a>
+            <p>Pizzeria Regina<br><b>$$</b></p>
+          </div>
+
+          <div class="col m4" tier=2 category=restaurant>
+            <a href="mr-bartleys.html"><img src="http://www.visitingnewengland.com/PageMill_Resources/bartleys.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Mr Bartley's Burger Cottage"></a>
+          <p>Mr Bartley's Burger Cottage<br><b>$$</b></p>
+        </div>
+
+          <div class="col m4" tier=2 category=restaurant>
+            <a href="the-beehive.html"><img src="https://assets.simpleviewinc.com/simpleview/image/fetch/q_75/https://assets.simpleviewinc.com/simpleview/image/upload/crm/boston/beehive0_25b7a3d3-5056-a36a-06e97bde0cbaaf3b.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="The Beehive"></a>
+          <p>The Beehive<br><b>$$</b></p>
+          </div>
+        </div>
+
+<!--Restaurants (2 are in row 4 but the rest fall under row 5 and below) (alternate Restaurants and Activities for ALL tab but then seperate in designated tabs)-->
+<!--ROW 6-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="the-salty-pig.html"><img src="http://cache.boston.com/resize/bonzai-fba/Globe_Photo/2011/09/27/1317144757_2085/539w.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="The Salty Pig"></a>
+        <p>The Salty Pig<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=restaurant>
+      <a href="the-kitchen-cafe.html"><img src="https://s3-media4.fl.yelpcdn.com/bphoto/tsz-puUnhrgFncmzbrBvBA/o.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="The Kitchen Cafe"></a>
+        <p>The Kitchen Cafe<br><b>$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="milkweed.html"><img src="https://raster-static.postmates.com/?url=com.postmates.img.prod.s3.amazonaws.com/a26b18e4-3d8b-453d-8abd-f887380f528d/orig.jpg&quality=90&w=1500&h=900&mode=crop&format=jpg&v=4" style="width:300px;height:200px;"  class="hover-opacity" alt="Milkweed"></a>
+      <p>Milkweed<br><b>$$</b></p>
+      </div>
+    </div>
+</div>
+<br>
+<br>
+
+  <!-- Footer -->
+   <footer class="padding-32 light-grey small center" id="footer">
+    <div class="row-padding">
+        <center><h4>Contact</h4>
+        <p>Questions? Go ahead.</p></center>
+      <form action="/action_page.php" target="_blank">
+        <div class="row-padding" style="margin:0 -16px 8px -16px">
+          <div class="half">
+            <input class="input border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="half">
+            <input class="input border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="input border" type="text" placeholder="Message" required name="Message">
+        <button class="button black right section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center><div class="col">
+        <a href="https://www.facebook.com/TotallyTeen4/"><i class="fa fa-facebook-official hover-opacity"></i></a>
+        <a href="https://www.instagram.com/totallyteen4/?hl=en"><i class="fa fa-instagram hover-opacity"></i></a>
+        <a href="https://pin.it/4yshwqwmbcg7v7"><i class="fa fa-pinterest-p hover-opacity"></i></a>
+      </div>
+    </center>
+    </div>
+  </footer>
+
+</body>
+</html>
