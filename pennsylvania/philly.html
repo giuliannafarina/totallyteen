@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<title>Philadelphia, Pennsylvania</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../totallyteen.css">
+<script src="../totallyteen.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="sidebar bar-block white collapse top" style="z-index:3;width:200px" id="mySidebar">
+  <div class="container display-container padding-16">
+    <i onclick="w3_close()" class="fa fa-remove hide-large button display-topright"></i>
+    <h3 class="wide"><b><a href="../index.html"><img src="../Totally Teen.png" style="width:150px;height:150px;"></a></b></h3>
+  </div>
+  <div class="padding-32 large text-grey" style="font-weight:bold">
+    <a id="allbutton" class="bar-item button" onclick= "allSelected()" >All</a>
+    <a id="restaurantbutton" class="bar-item button" onclick= "restaurantsSelected()" >Restaurants</a>
+    <a id = "activitybutton" class="bar-item button" onclick= "activitiesSelected()" >Activities</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="button block white left-align" id="myBtn">
+      Prices <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="bar-block hide padding-large medium">
+      <p id="freebutton" onclick= "tier0selected()" class="bar-item button">Free</a>
+      <p id="onedollarbutton" onclick ="tier1selected()" class="bar-item button">$</a>
+      <p id="twodollarbutton" onclick="tier2selected()" class="bar-item button">$$</a>
+      <p id="threedollarbutton" onclick="tier3selected()" class="bar-item button">$$$</a>
+    </div>
+  </div>
+  <a href="#footer" class="bar-item button padding">Contact</a>
+  <a href="javascript:void(0)" class="bar-item button padding" onclick="document.getElementById('Follow').style.display='block'">Follow</a>
+  <a href="#footer"  class="bar-item button padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bar top hide-large black xlarge">
+  <div class="bar-item padding-24 wide">Giulianna is making the logo!</div>
+  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="container xlarge">
+    <p class="left">Pennsylvania</p>
+    <p class="right">
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="display-container container">
+    <img src="https://www.phillymag.com/wp-content/uploads/sites/3/2016/06/philly-skyline-940x540.jpg" alt="Philly Skyline" style="width:100%">
+    <div class="display-topleft text-white" style="padding:24px 48px">
+      <h1 class="jumbo hide-small">Philidelphia</h1>
+      <h1 class="hide-large hide-medium">Pennsylvania</h1>
+      <p><a href="#jeans" class="button black padding-large large">Explore Now</a></p>
+    </div>
+  </div>
+
+  <div class="container text-grey" id="jeans">
+    <p>15 items</p>
+  </div>
+
+  <div id="modal01" class="modal black" onclick="this.style.display='none'">
+    <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="modal-content animate-zoom center transparent padding-64">
+      <img id="img01" class="image">
+      <p id="caption" class="opacity large"></p>
+    </div>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div class="content container padding-64" id="portfolio">
+
+<!--ROW 1-->
+    <div class="row-padding center">
+      <div class="col m4" tier=0 category=activity>
+        <a href="spruce.html"><img src="https://assets.visitphilly.com/wp-content/uploads/2017/12/crtsy-drwc-sshp-at-night-2200VP.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Spruce Street Harbor Park"></a>
+        <p>Spruce Street Harbor Park<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=0 category=activity>
+        <a href="magic-garden.html"><img src="https://media.phillyvoice.com/media/images/Julys_Garden_Sips_at_Philadelphias.2e16d0ba.fill-735x490.png" style="width:300px;height:200px;"  class="hover-opacity" alt="Philadelphia's Magic Garden"></a>
+        <p>Philadelphia's Magic Garden<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=0 category=activity>
+        <a href="pier68.html"><img src="http://media.hiddencityphila.org/wp-content/uploads/2015/09/11190310/Pier-68-2.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Pier 68"></a>
+        <p>Pier 68<br><b>Free</b></p>
+      </div>
+    </div>
+
+<!--ROW 2-->
+    <div class="row-padding center">
+      <div class="col m4" tier=0 category=activity>
+        <a href="eakins.html"><img src="https://assets.visitphilly.com/wp-content/uploads/2017/12/The-Oval-M.Fischetti-skyline-900VP.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Eakins Oval"></a>
+        <p>Eakins Oval<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=0 category=activity>
+      <a href="philly-murals.html"><img src="https://assets.visitphilly.com/wp-content/uploads/2018/02/MuralArts-Legendary-R.Kennedy-VP-2200x1237.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Philidelphia Murals"></a>
+      <p>Philidelphia Murals<br><b>Free</b></p>
+      </div>
+
+      <div class="col m4" tier=1 category=activity>
+        <a href="eastern-state-penitentiary.html"><img src="https://assets.visitphilly.com/wp-content/uploads/2018/02/Eastern-State-Penitentiary-Terror-Behind-the-Walls-M-Edlow-2200VP.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Eastern State Penitentiary"></a>
+        <p>Eastern State Penitentiary<br><b>$</b></p>
+      </div>
+    </div>
+
+<!--ROW 3-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=activity>
+        <a href="speed-raceway-philly.html"><img src="https://speedraceway.com/media/page_photos/0000/photo_223.normal.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Speed Raceway"></a>
+        <p>Speed Raceway<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+      <a href="hipcityveg.html"><img src="https://www.universitycity.org/sites/default/files/styles/restaurant_image/public/Hip_City_Veg_Interior-13.jpg?itok=rot9w5fh" style="width:300px;height:200px;"  class="hover-opacity" alt="HipCityVeg"></a>
+        <p>HipCityVeg<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="front-street-cafe.html"><img src="https://partyspace.com/images/providers/Front%20Street%20Cafe%20Philadelphia.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Front Street Cafe"></a>
+      <p>Front Street Cafe<br><b>$$</b></p>
+    </div>
+  </div>
+
+<!--ROW 4-->
+    <div class="row-padding center">
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="suraya.html"><img src="https://surayaphilly.com/wp-content/uploads/2018/11/180216_Suraya_Website-13-1-1310x874.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Suraya Restaurant"></a>
+        <p>Suraya Restaurant<br><b>$$</b></p>
+      </div>
+
+      <div class="col m4" tier=2 category=restaurant>
+        <a href="tir-na-nog-irish-grill.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/04/18/72/49/tir-na-nog-irish-bar.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Tir Na Nog Irish Bar & Grill"></a>
+      <p>Tir Na Nog Irish Bar & Grill<br><b>$$</b></p>
+    </div>
+
+      <div class="col m4" tier=3 category=restaurant>
+        <a href="zahav.html"><img src="https://cdn.vox-cdn.com/thumbor/b1O6IyJgz3UZUvRNd76Iqv6YBoM=/0x0:5101x3401/1200x800/filters:focal(2143x1293:2959x2109)/cdn.vox-cdn.com/uploads/chorus_image/image/63747456/Zahav_CreditAlexandraHawkins_HummusLaffaSalatim.0.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Zahav"></a>
+      <p>Zahav<br><b>$$$</b></p>
+      </div>
+    </div>
+
+<!--ROW 5-->
+      <div class="row-padding center">
+        <div class="col m4" tier=1 category=restaurant>
+            <a href="beilers-donuts.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF5-pR3kzoAc9vxHdCiXmsTXTETo_cbhweDtiWv7N2eF9E9iJz" style="width:300px;height:200px;"  class="hover-opacity" alt="Beiler’s Donuts"></a>
+            <p>Beiler’s Donuts<br><b>$</b></p>
+          </div>
+
+          <div class="col m4" tier=1 category=restaurant>
+            <a href="mac-cart.html"><img src="https://macmartcart.com/wp-content/uploads/2016/07/index-menu-pic.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="Mac Mart"></a>
+          <p>Mac Mart<br><b>$</b></p>
+        </div>
+
+          <div class="col m4" tier=2 category=restaurant>
+            <a href="north-bowl.html"><img src="https://www.kidsparties.party/uploads/images/north-bowl-lounge-and-lanes-graduation-parties-in-pennsylvania.jpg" style="width:300px;height:200px;"  class="hover-opacity" alt="North Bowl"></a>
+          <p>North Bowl<br><b>$$</b></p>
+          </div>
+        </div>
+</div>
+<br>
+<br>
+
+  <!-- Footer -->
+   <footer class="padding-32 light-grey small center" id="footer">
+    <div class="row-padding">
+        <center><h4>Contact</h4>
+        <p>Questions? Go ahead.</p></center>
+      <form action="/action_page.php" target="_blank">
+        <div class="row-padding" style="margin:0 -16px 8px -16px">
+          <div class="half">
+            <input class="input border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="half">
+            <input class="input border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="input border" type="text" placeholder="Message" required name="Message">
+        <button class="button black right section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center><div class="col">
+        <a href="https://www.facebook.com/TotallyTeen4/"><i class="fa fa-facebook-official hover-opacity"></i></a>
+        <a href="https://www.instagram.com/totallyteen4/?hl=en"><i class="fa fa-instagram hover-opacity"></i></a>
+        <a href="https://pin.it/4yshwqwmbcg7v7"><i class="fa fa-pinterest-p hover-opacity"></i></a>
+      </div>
+    </center>
+    </div>
+  </footer>
+
+</body>
+</html>
